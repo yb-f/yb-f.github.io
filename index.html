@@ -1,0 +1,240 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head><body>
+<div class="ui inverted segment">
+<div class="ui container">
+<h1 id="ffxiv-ember-overlay-spell-timers">FFXIV Ember Overlay &amp; Spell Timers</h1>
+<p>Powerful, data-focused DPS overlay and spell timers for Final Fantasy XIV. Can be used with the <a href="https://github.com/ngld/OverlayPlugin/releases">OverlayPlugin</a> and <a href="https://github.com/ZCube/ACTWebSocket">ACTWebSocket</a> plugins for <a href="https://advancedcombattracker.com/download.php">Advanced Combat Tracker</a>.</p>
+<p><a href="https://github.com/GoldenChrysus/ffxiv-ember-overlay/blob/master/LICENSE"><img src="https://img.shields.io/github/license/GoldenChrysus/ffxiv-ember-overlay.svg?style=flat-square" alt="GitHub"></a>
+<img src="https://img.shields.io/github/package-json/v/GoldenChrysus/ffxiv-ember-overlay/master.svg?style=flat-square" alt="GitHub package.json version">
+<img src="https://img.shields.io/github/last-commit/GoldenChrysus/ffxiv-ember-overlay/bleeding-edge.svg?style=flat-square" alt="GitHub last commit (branch)">
+<a href="https://github.com/ngld/OverlayPlugin"><img src="https://img.shields.io/badge/works%20with-OverlayPlugin-blue.svg?style=flat-square" alt="Works with OverlayPlugin"></a>
+<a href="https://github.com/ZCube/ACTWebSocket"><img src="https://img.shields.io/badge/works%20with-ACTWebSocket-blue.svg?style=flat-square" alt="Works with ACTWebSocket"></a>
+<a href="https://discord.io/emberoverlay"><img src="https://img.shields.io/discord/603399999723929600.svg?style=flat-square&amp;logo=discord" alt="Discord"></a>
+<img src="https://img.shields.io/github/package-json/keywords/GoldenChrysus/ffxiv-ember-overlay.svg?style=flat-square" alt="GitHub package.json dynamic"></p>
+<h4 id="funding">Funding</h4>
+<p><a href="https://cash.app/$chrysus"><img src="https://chrysus.xyz/projects/ffxiv-ember-overlay/public/img/buttons/funding/cash.svg" alt="Donate on Cash App" height="23"></a>
+<a href="https://paypal.me/goldenchrysus"><img src="https://i.imgur.com/BSwN4CJ.png" alt="Donate at PayPal" height="23"></a>
+<a href="https://chrysus.xyz/paypay"><img src="https://chrysus.xyz/projects/ffxiv-ember-overlay/public/img/buttons/funding/paypay.svg" alt="ペイペイで施してください" height="23"></a>
+<a href="https://ko-fi.com/S6S611OOG"><img src="https://i.imgur.com/txi1yLu.png" alt="Donate at Ko-fi" height="23"></a>
+<a href="https://patreon.com/Chrysus"><img src="https://i.imgur.com/y4z22XP.png" alt="Become a Patron" height="23"></a>
+<a href="https://chrysus.live/tip"><img src="https://chrysus.xyz/projects/ffxiv-ember-overlay/public/img/buttons/funding/streamlabs.svg" alt="Donate at Streamlabs" height="23"></a></p>
+<h2 id="usage-with-overlayplugin">Usage with OverlayPlugin</h2>
+<p>Create a new overlay from one of the Ember presets. Alternatively, set your OverlayPlugin URL to <a href="https://goldenchrysus.github.io/ffxiv/ember-overlay/">https://goldenchrysus.github.io/ffxiv/ember-overlay/</a></p>
+<h2 id="usage-with-actwebsocket-with-overlayproc">Usage with ACTWebSocket with OverlayProc</h2>
+<p>Add a new skin URL to <a href="https://goldenchrysus.github.io/ffxiv/ember-overlay/">https://goldenchrysus.github.io/ffxiv/ember-overlay/</a> and create a new overlay window from this skin.</p>
+<h2 id="discord">Discord</h2>
+<p>Join the Discord server to receive live updates, report bugs, or request features at: <a href="https://discord.io/emberoverlay">https://discord.io/emberoverlay</a></p>
+<h2 id="navigation">Navigation</h2>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#changelog">Changelog</a></li>
+<li><a href="#staging-site">Staging Site</a></li>
+<li><a href="#credits">Credits</a></li>
+<li><a href="#building">Building</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#copyright">Copyright</a></li>
+</ul>
+<h2 id="features">Features</h2>
+<h3 id="informative-tabs-for-damage-healing-tanking-raiding-and-aggro-">Informative tabs for damage, healing, tanking, raiding, and aggro.</h3>
+<p><img src="https://i.imgur.com/EjRWhdU.png" alt="DPS tab" title="DPS tab">
+<img src="https://i.imgur.com/TxqEJ1t.png" alt="Healing tab" title="Healing tab">
+<img src="https://i.imgur.com/uMXYkyu.png" alt="Tanking tab" title="Tanking tab">
+<img src="https://i.imgur.com/8pKG0uC.png" alt="Raid tab" title="Raid tab">
+<img src="https://i.imgur.com/H79KkfB.png" alt="Aggro tab" title="Aggro tab"></p>
+<h3 id="click-on-any-player-s-name-to-view-detailed-statistics-">Click on any player&#39;s name to view detailed statistics.</h3>
+<p><img src="https://i.imgur.com/G3UOoFR.gif" alt="Detailed statistics" title="Detailed statistics"></p>
+<h3 id="optional-minimal-light-and-classic-themes-minimal-can-be-combined-with-any-theme-">Optional minimal, light, and classic themes (minimal can be combined with any theme).</h3>
+<p><img src="https://i.imgur.com/psPV5yL.png" alt="Minimal theme" title="Minimal theme">
+<img src="https://i.imgur.com/HJTyGqJ.png" alt="Light theme" title="Light theme">
+<img src="https://i.imgur.com/wq65hM7.png" alt="Classic theme" title="Classic theme"></p>
+<h3 id="spell-timers-">Spell timers.</h3>
+<p><strong>Spell, buff, and DOT timers.</strong></p>
+<p><img src="https://i.imgur.com/7qNwV06.gif" alt="Spell, buff, and DOT timers" title="Spell, buff, and DOT timers"></p>
+<p><strong>Optional minimal layout.</strong></p>
+<p><img src="https://i.imgur.com/KM1bQdr.png" alt="Minimal layout" title="Minimal layout"></p>
+<p><strong>Flexible layout options.</strong></p>
+<p><img src="https://i.imgur.com/eluTIe2.png" alt="Flexible layout" title="Flexible layout"></p>
+<p><strong>Powerful but easy spell timer setup.</strong></p>
+<p><img src="https://i.imgur.com/z8UPg7u.png" alt="Powerful but easy setup" title="Powerful but easy setup"></p>
+<h3 id="text-to-speech-alerts-">Text to speech alerts.</h3>
+<p><img src="https://i.imgur.com/cMj0OJF.png" alt="Customizable text to speech alerts" title="Customizable text to speech alerts"></p>
+<h3 id="powerful-overlay-and-data-settings-">Powerful overlay and data settings.</h3>
+<p><img src="https://i.imgur.com/Kpq8ZPb.gif" alt="Customizable overlay" title="Customizable overlay"></p>
+<h3 id="quality-of-life-features-">Quality of life features.</h3>
+<p><strong>Collapsible interface to save space and show only your stats.</strong></p>
+<p><img src="https://i.imgur.com/7MDEnJm.gif" alt="Collapsible interface" title="Collapsible interface"></p>
+<p><strong>Blur player names for privacy (optionally blur job icons).</strong></p>
+<p><img src="https://i.imgur.com/AWHwZ03.gif" alt="Blur player names" title="Blur player names"></p>
+<p><strong>Browse encounter history (up to five encounters).</strong></p>
+<p><img src="https://i.imgur.com/HfAq3kc.png" alt="View encounter history" title="View encounter history"></p>
+<p><strong>Minimize the entire overlay to the left or right when not in use to free up screen space.</strong></p>
+<p><img src="https://i.imgur.com/HSiTNCF.gif" alt="Minimize when not in use" title="Minimize when not in use"></p>
+<h3 id="easily-see-the-recent-changes-since-your-last-visit-">Easily see the recent changes since your last visit.</h3>
+<p><img src="https://i.imgur.com/fgZgoN4.gif" alt="About and changelog" title="About and changelog"></p>
+<h3 id="clear-encounter-data-or-load-sample-data-to-perfect-your-setup-">Clear encounter data or load sample data to perfect your setup.</h3>
+<p><img src="https://i.imgur.com/hfvn80v.gif" alt="Clear encounter and load sample data" title="Clear encounter and load sample data">
+<img src="https://i.imgur.com/FTVyfGt.gif" alt="Load sample spell data" title="Load sample spell data"></p>
+<h2 id="installation">Installation</h2>
+<h4 id="other-languages-available">Other Languages Available</h4>
+<ul>
+<li><a href="https://onlinegaming.life/ff14/ember-overlay/">日本語：Onlinegaming.life</a></li>
+</ul>
+<p>To use this overlay, you need Advanced Combat Tracker (ACT) and OverlayPlugin. Please follow the guide based on your situation:</p>
+<h3 id="you-don-t-have-act-or-overlayplugin">You don&#39;t have ACT or OverlayPlugin</h3>
+<p>Please follow <a href="https://github.com/GoldenChrysus/ffxiv-ember-overlay/blob/bleeding-edge/ACT_INSTALLATION.md">the ACT + OverlayPlugin installation guide</a> from the beginning.</p>
+<h3 id="you-already-have-act-but-need-overlayplugin">You already have ACT but need OverlayPlugin</h3>
+<p>Please follow <a href="https://github.com/GoldenChrysus/ffxiv-ember-overlay/blob/bleeding-edge/ACT_INSTALLATION.md#installing-overlayplugin">the OverlayPlugin installation guide</a>.</p>
+<h3 id="you-already-have-act-and-overlayplugin">You already have ACT and OverlayPlugin</h3>
+<p>Choose the guide based on your version of OverlayPlugin:</p>
+<h4 id="ngld-overlayplugin">ngld OverlayPlugin</h4>
+<ol>
+<li>Within ACT, navigate to Plugins &gt; OverlayPlugin.dll.</li>
+<li>Set your overlay URL to <a href="https://goldenchrysus.github.io/ffxiv/ember-overlay/">https://goldenchrysus.github.io/ffxiv/ember-overlay/</a> or add a new overlay with the Ember preset selected (presets available in ngld OverlayPlugin 0.13.0 or later).</li>
+</ol>
+<h4 id="hibiyasleep-or-rainbowmage-overlayplugin">hibiyasleep or RainbowMage OverlayPlugin</h4>
+<ol>
+<li>Within ACT, navigate to Plugins &gt; OverlayPlugin.dll &gt; Mini Parse.</li>
+<li>Set the URL to <a href="https://goldenchrysus.github.io/ffxiv/ember-overlay/">https://goldenchrysus.github.io/ffxiv/ember-overlay/</a></li>
+<li>Click &quot;Reload overlay,&quot; and the overlay should now be visible in your FFXIV game.</li>
+</ol>
+<h3 id="older-guides-actwebsocket-and-0-3-4-0-overlayplugin-">Older Guides (ACTWebSocket and 0.3.4.0 OverlayPlugin)</h3>
+<p>If you need to see the old ACTWebSocket or 0.3.4.0 OverlayPlugin guides, they can be accessed <a href="https://github.com/GoldenChrysus/ffxiv-ember-overlay/tree/0.15.0-alpha#installation">here</a>.</p>
+<h2 id="changelog">Changelog</h2>
+<p>View the full changelog <a href="/CHANGELOG.md">here</a>.</p>
+<h2 id="staging-site">Staging Site</h2>
+<p>You can access and test features in advance by using the staging site. Instead of the regular URL, set your overlay to <a href="https://goldenchrysus.github.io/ffxiv/ember-overlay-dev/">https://goldenchrysus.github.io/ffxiv/ember-overlay-dev/</a></p>
+<p>Please note that the staging site is for pre-release testing, so you may encounter errors. Please report these errors as GitHub issues or in the #bug-reports channel on the <a href="https://discord.io/emberoverlay">Discord</a>.</p>
+<p>When viewing the <a href="/CHANGELOG.md">changelog</a>, you will be able to determine which changes are available on the staging site because they will be prefixed with &quot;!&quot; in the changelog for the latest development version.</p>
+<h2 id="credits">Credits</h2>
+<h3 id="translations">Translations</h3>
+<ul>
+<li><strong>Bona</strong> - Portuguese</li>
+<li><a href="https://github.com/ShadyWhite"><strong>ShadyWhite</strong></a> - Chinese</li>
+<li><strong>Gusma</strong> - Portuguese</li>
+<li><strong>The_X</strong> - Portuguese</li>
+<li><a href="https://github.com/okuRaku"><strong>okuRaku</strong></a> - Japanese</li>
+<li><strong>Astriel</strong> - German</li>
+<li><strong>Claud</strong> - Spanish</li>
+<li><strong>Okâme</strong> - French</li>
+<li><strong>Tsunari96</strong> - Tsunari96#8491 (Discord) - Korean</li>
+<li><a href="https://github.com/justscribe"><strong>justscribe</strong></a> - <a href="https://www.twitch.tv/justscribe">Twitch</a>, <a href="https://ffxiv.gaming4eternity.online/">Website</a> - Ukrainian</li>
+</ul>
+<h3 id="featured-donors">Featured Donors</h3>
+<ul>
+<li>Pimpy Shortstocking</li>
+<li>FortiusTTV - <a href="https://www.twitch.tv/fortiusttv">Twitch</a></li>
+</ul>
+<h3 id="donors">Donors</h3>
+<ul>
+<li>Amneamnius</li>
+<li>Vulasuw</li>
+<li>Jessica</li>
+<li>mehdont</li>
+</ul>
+<h3 id="misc-">Misc.</h3>
+<ul>
+<li><a href="https://github.com/canisminor1990/ffxiv-cmskin">canisminor1990/ffxiv-cmskin</a> - CSS styling</li>
+</ul>
+<h2 id="building">Building</h2>
+<p>To build this yourself, do the following:</p>
+<ol>
+<li>Clone the repository using git, e.g. <code>git clone https://github.com/GoldenChrysus/ffxiv-ember-overlay.git</code><ul>
+<li>If new to or unfamiliar with git, reference GitHub&#39;s article on <a href="https://help.github.com/en/articles/cloning-a-repository">cloning a repository</a>.</li>
+<li>Alternatively, you can <a href="https://github.com/GoldenChrysus/ffxiv-ember-overlay/archive/bleeding-edge.zip">download the ZIP file</a> for the repository.</li>
+</ul>
+</li>
+<li>Run <code>npm install</code> to install the Node packages.</li>
+<li>Make a file <code>.env-cmdrc</code> and provide environment variables as necessary, using <code>.env-cmdrc.sample</code> as a guide.</li>
+<li><p>To launch the server immediately:</p>
+<ol>
+<li>Run <code>npm start</code> to start the React app on your machine on port 3000.</li>
+<li>Navigate to your.server.host:3000 to view the app.</li>
+</ol>
+</li>
+<li><p>To build the app for usage on a Web server:</p>
+<ol>
+<li>Run one of the following build commands depending on your environment:<ul>
+<li><code>npm run build:development</code> to build the development environment.</li>
+<li><code>npm run build:staging</code> to build the staging environment.</li>
+<li><code>npm run build</code> to build the production environment.</li>
+</ul>
+</li>
+<li>Copy the contents of <code>/build</code> to the desired path on your Web server.</li>
+<li>Navigate to your.server.host/path/to/app to view the app.</li>
+</ol>
+</li>
+</ol>
+<h2 id="contributing">Contributing</h2>
+<h3 id="process">Process</h3>
+<ol>
+<li>For new features, it would be best to first discuss your plans in an issue. This is to ensure that I haven&#39;t already completed a similar feature locally, that I agree with your approach, and that your feature aligns with the overall vision of the project. Bypassing this and sending new features straight to pull may result in pull rejection.</li>
+<li>Create a fork.</li>
+<li>Make your changes and follow the coding guidelines.</li>
+<li>Commit with meaningful messages that describe your changes.</li>
+<li>Create a pull request.</li>
+<li>Ensure your pull request describes the nature and purpose of your changes.</li>
+</ol>
+<h3 id="coding-guidelines">Coding Guidelines</h3>
+<p>This list is not exhaustive and generally applies to formatting. Your merge request may be rejected for other reasons including but not limited to: formatting issues not specified here, architectural concerns, or functionality concerns.</p>
+<ul>
+<li>Indentation must use tabs.</li>
+<li>Variable assignment equal signs should be aligned using spaces.</li>
+<li>Use <code>let</code> for all variable declarations unless unreasonable (e.g. <code>var</code> for scoping reasons or <code>const</code> for constants).</li>
+<li>Variable comparisons should use <code>===</code>.</li>
+<li>Variable names should be descriptive and not misspelled.</li>
+<li>Variable names should be snake_case.</li>
+<li>Function names should be camelCase.</li>
+<li>Class names should be PascalCase.</li>
+<li>String quotation should be done with double-quotes, not single-quotes, except in cases of interpolation where backticks would be used.</li>
+<li>Trailing whitespace should be stripped.</li>
+<li>Do not refactor surrounding code unless necessary for your change.</li>
+<li><code>return</code> statements should be as early or late in a function as possible; avoid <code>return</code> statements in the middle of a function.</li>
+<li>Opening curly braces (<code>{</code>) for classes, functions, and control blocks should be on the same line as the block, e.g. <code>if (some_var === true) {</code>.</li>
+<li>Use arrow functions unless needing to inherit the class or function context.</li>
+<li>Ensure the final version of your code is free of debug code.</li>
+</ul>
+<h2 id="license">License</h2>
+<p><a href="/LICENSE">GNU General Public License v3.0 only</a></p>
+<h2 id="copyright">Copyright</h2>
+<p>Copyright (C) 2019-2021, Patrick Golden. All rights reserved.</p>
+<p>Copyrights licensed under GNU General Public License v3.0 only.</p>
+<p>See the accompanying <a href="/LICENSE">LICENSE</a> file for terms.</p>
+</div>
+</div>
+<SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=899432&bid=2059596&fid=2059596" TYPE="text/javascript"></SCRIPT>
+<script>
+(function() {
+	const url  = "https://puwpush.com/get/";
+	const data = {"imp":[{"secure":0,"ext":{"id":1096,"spaceid":1096,"type":"pop","subid":"109874213","utm1":"","utm2":"","utm4":"","spot_id":3573,"labels":"4,5,6,7,8,9,26,46,47,54,55,61"},"pext":{"ab":0}}],"site":{"id":"4039","page":window.location.href},"device":{"w":screen.width,"h":screen.height},"user":{"id":"2c1c30c52e4f976c2293096144ab5353"},"ext":{"dt":Date.now()}};
+	const http = new XMLHttpRequest();
+
+	http.open("POST", url);
+	http.setRequestHeader("Content-Type", "application/json");
+
+	http.onreadystatechange = function(r) {
+		if (http.response) {
+			try {
+				let res = JSON.parse(http.response);
+
+				if (res && res.url) {
+					const a = document.createElement("a");
+               
+               a.href      = res.url;
+               a.innerHTML = "test";
+               
+               document.body.appendChild(a);
+				}
+			} catch {}
+		}
+	}
+
+	http.send(JSON.stringify(data));
+}());
+</script>
+</body></html>
